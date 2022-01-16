@@ -393,3 +393,72 @@ package main
 // 	k.Takipci = append(k.Takipci, t)
 // 	return nil
 // }
+
+// interfaces
+
+// type Kullanici interface {
+// 	TakipciSayisi() int
+// 	TakipciEkle(t Kullanici)
+// }
+
+// type kullanici struct {
+// 	Ad      string `json:"adi"`
+// 	Soyad   string `json:"soyad"`
+// 	Takipci []kullanici
+// }
+
+// func (k kullanici) TakipciSayisi() int {
+// 	return len(k.Takipci)
+// }
+
+// func (k *kullanici) TakipciEkle(t kullanici) {
+// 	fmt.Println(k.Takipci)
+// 	if k.Takipci == nil {
+// 		k.Takipci = []kullanici{}
+// 	}
+// 	k.Takipci = append(k.Takipci, t)
+// }
+
+// var k Kullanici
+
+// func main() {
+// 	k := kullanici{
+// 		Ad:    "Go",
+// 		Soyad: "Türkiye",
+// 		Takipci: []kullanici{
+// 			{
+// 				Ad:    "Takipci",
+// 				Soyad: "1",
+// 			},
+// 			{
+// 				Ad:    "Takipci",
+// 				Soyad: "2",
+// 			},
+// 		},
+// 	}
+// 	k2 := kullanici{
+// 		Ad:    "Go",
+// 		Soyad: "Türkiye",
+// 		Takipci: []kullanici{
+// 			{
+// 				Ad:    "Takipci",
+// 				Soyad: "1",
+// 			},
+// 		},
+// 	}
+// 	t := kullanici{
+// 		Ad:    "Takipci",
+// 		Soyad: "3",
+// 	}
+// 	fmt.Println(k.TakipciSayisi())
+// 	k.TakipciEkle(t)
+// 	fmt.Println(k.TakipciSayisi())
+
+// 	fmt.Println(buyuktur(k, k2))
+// }
+
+// func buyuktur(k1, k2 kullanici) bool {
+// 	return k1.TakipciSayisi() > k2.TakipciSayisi()
+// }
+
+// modules
